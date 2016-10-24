@@ -1,0 +1,11 @@
+{
+  "name": "Rails Girls Porto Alegre",
+  "short_name": "Raisl Girls POA",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}

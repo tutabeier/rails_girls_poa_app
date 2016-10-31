@@ -2,9 +2,16 @@ angular
 .module('railsGirls')
 .controller('AgendaController', AgendaController);
 
-function AgendaController($ionicTabsDelegate) {
+function AgendaController($ionicTabsDelegate, $http) {
   var vm = this;
-  vm.dias = [{
+  var events = $http.get('http://localhost:3000/events')
+    .then(function(response) {
+      vm.dias = response.data;
+    }, function(err){
+      console.log(err);
+    });
+  vm.dias = [];
+  vm.dias_bk = [{
     titulo: '21/10 - Sexta-feira',
     eventos: [{
       icone: 'ion-android-restaurant',

@@ -2,13 +2,13 @@
   <ion-content class="padding">
     <div class="list card" ng-repeat="dia in vm.dias">
       <div class="item item-divider">
-        Dia {{dia.titulo}}
+        Dia {{dia[0]}}
       </div>
 
-      <div class="item item-icon-left" ng-repeat="evento in dia.eventos">
+      <div class="item item-icon-left" ng-repeat="evento in dia[1]">
         <i class="icon {{evento.icone}} assertive"></i>
-        <h2>{{evento.titulo}}</h2>
-        <p>{{evento.horario}} - {{evento.local}}</p>
+        <h2>{{evento.title}}</h2>
+        <p>{{evento.date}} - {{evento.location_id}}</p>
       </div>
     </div>
   </ion-content>
